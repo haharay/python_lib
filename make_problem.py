@@ -6,8 +6,9 @@
 
 import os
 import re
-import pandas as pd
+
 import numpy as np
+import pandas as pd
 
 #  ￥之间的为需要填写的，#%开头的为提示。不一定H3标题。
 #################################################
@@ -82,8 +83,9 @@ def ans_hint(expect, sol, hints):
 
 def main(code, prob, ZZ, frmt, expect, sol, hints):
     from pygments import highlight
-    from pygments.lexers import PythonLexer
     from pygments.formatters import HtmlFormatter
+    from pygments.lexers import PythonLexer
+
     ## 两个评分函数，一个比例评分，一个正误评分
     # to do: tfidf的中文评阅
     correct_grader = """
