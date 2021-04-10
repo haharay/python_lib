@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 import jieba
 from gensim import corpora, models, similarities
-
+# python-Levenshtein
 # 目标：计算相似度，根据相似度来评分主观题。
 
 text = """我是一条天狗呀！
@@ -41,7 +41,7 @@ all_doc.append(doc6)
 all_doc.append(doc7)
 
 
-# 制作语料库
+# 制作语料库，某一门课的语料库怎么办？或者是一般性的论文或作文呢？
 all_doc_list = [list(jieba.cut(si)) for si in all_doc]
 dic = corpora.Dictionary(all_doc_list)   #获取词袋
 corpus = [dic.doc2bow(doc) for doc in all_doc_list]  #制作语料库
