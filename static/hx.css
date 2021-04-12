@@ -87,9 +87,6 @@ p > small.hx-caption {
 }
 
 /* Larger UL and OL left-hand margins. */
- {
-  #;
-}
 main .vert .xblock ul {
   margin-left: 1em !important;
 }
